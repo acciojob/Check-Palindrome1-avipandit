@@ -1,14 +1,17 @@
 // complete the given function
 
 function palindrome(str){
-var re = /[^A-Za-z0-9]/g;
- str = str.toLowerCase().replace(re, '');
- var len = str.length;
- for (var i = 0; i < len/2; i++) {
-   if (str[i] !== str[len - 1 - i]) {
-       return false;
-   }
- }
- return true;
+let j = str.length -1;
+      for( let i = 0 ; i < j/2 ;i++)
+      {
+        let x = str[i] ;
+        let y = str[j-i];
+        if( x != y)
+        {
+          
+          return false;
+        }
+      }
+      return true;
 }
 module.exports = palindrome
